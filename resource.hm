@@ -1,0 +1,6 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by GrowBox.rc
+//
+#define HIDC_EDITTemperature            0x806603f4    // IDD_GROWBOX_DIALOG
+#define HIDC_EDIThumidity               0x806603f5    // IDD_GROWBOX_DIALOG
+#define HIDC_EDIThygroCnt               0x806603f3    // IDD_GROWBOX_DIALOG

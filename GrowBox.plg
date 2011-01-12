@@ -1,0 +1,68 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GrowBox - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\duenda\AppData\Local\Temp\RSP2BD.tmp" with contents
+[
+/nologo /MDd /w /W0 /Gm /GX /ZI /Od /I "\mysql\5.0\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/GrowBox.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\projects\Growbox\Growbox\GrowBox.cpp"
+"C:\projects\Growbox\Growbox\GrowBoxDlg.cpp"
+"C:\projects\Growbox\Growbox\StateClass.cpp"
+]
+Creating command line "cl.exe @C:\Users\duenda\AppData\Local\Temp\RSP2BD.tmp" 
+Creating temporary file "C:\Users\duenda\AppData\Local\Temp\RSP2BE.tmp" with contents
+[
+\mysql\5.0\lib\opt\libmysql.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/GrowBox.pdb" /debug /machine:I386 /out:"Debug/GrowBox.exe" /pdbtype:sept 
+.\Debug\CoolingController.obj
+.\Debug\CSerial.obj
+.\Debug\DBInterface.obj
+.\Debug\GrowBox.obj
+.\Debug\GrowBoxDefines.obj
+.\Debug\GrowBoxDlg.obj
+.\Debug\GrowBoxSoapServer.obj
+.\Debug\HygrosenseIF.obj
+.\Debug\k8055d.obj
+.\Debug\PrintPort32.obj
+.\Debug\RelaisController.obj
+.\Debug\soapC.obj
+.\Debug\soapServer.obj
+.\Debug\StateClass.obj
+.\Debug\StdAfx.obj
+.\Debug\stdsoap2.obj
+.\Debug\USBDLL.OBJ
+.\Debug\GrowBox.res
+]
+Creating command line "link.exe @C:\Users\duenda\AppData\Local\Temp\RSP2BE.tmp"
+Creating temporary file "C:\Users\duenda\AppData\Local\Temp\RSP2CF.bat" with contents
+[
+@echo off
+copy        borlndmm.dll        .\.\Debug\
+copy        USB8IO.dll        .\.\Debug\
+copy        \mysql\5.0\lib\opt\libmysql.dll     .\.\Debug\
+copy        K8055D.dll    .\.\Debug\
+]
+Creating command line "C:\Users\duenda\AppData\Local\Temp\RSP2CF.bat"
+Compiling...
+GrowBoxDlg.cpp
+Skipping... (no relevant changes detected)
+GrowBox.cpp
+StateClass.cpp
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\GrowBox.exe
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+GrowBox.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

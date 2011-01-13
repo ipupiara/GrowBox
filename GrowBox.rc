@@ -180,7 +180,7 @@ BEGIN
                     WS_DISABLED | WS_TABSTOP,403,221,16,8
     PUSHBUTTON      "Ventilation",IDC_BUTTONVentilation,18,138,57,13,
                     WS_DISABLED
-    PUSHBUTTON      "Stop",IDC_BUTTONStopVentilation,18,152,24,13,
+    PUSHBUTTON      "Stop",IDC_BUTTONStopVentilation,18,151,24,13,
                     WS_DISABLED
 END
 

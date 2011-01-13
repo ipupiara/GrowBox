@@ -49,9 +49,9 @@
 
 // Paralle Port setting
 
-#define lptPortNumber 0x0378
+//#define lptPortNumber 0x0378
 
-//#define lptPortNumber 0x03BC
+#define lptPortNumber 0x03BC
 
 //com2 had been intentionally not tested   ;-)
 

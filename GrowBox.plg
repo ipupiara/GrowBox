@@ -3,57 +3,48 @@
 <pre>
 <h1>Build Log</h1>
 <h3>
---------------------Configuration: GrowBox - Win32 Debug--------------------
+--------------------Configuration: GrowBox - Win32 Release--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\duenda\AppData\Local\Temp\RSP2BD.tmp" with contents
+Creating command line "rc.exe /l 0x409 /fo"Release/GrowBox.res" /d "NDEBUG" "C:\GrowBox\GrowBox\growbox\GrowBox.rc"" 
+Creating temporary file "C:\DOCUME~1\talvin\LOCALS~1\Temp\RSP32.tmp" with contents
 [
-/nologo /MDd /w /W0 /Gm /GX /ZI /Od /I "\mysql\5.0\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/GrowBox.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"C:\projects\Growbox\Growbox\GrowBox.cpp"
-"C:\projects\Growbox\Growbox\GrowBoxDlg.cpp"
-"C:\projects\Growbox\Growbox\StateClass.cpp"
+\mysql\5.0\lib\opt\libmysql.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/GrowBox.pdb" /machine:I386 /out:"Release/GrowBox.exe" 
+.\Release\CoolingController.obj
+.\Release\CSerial.obj
+.\Release\DBInterface.obj
+.\Release\GrowBox.obj
+.\Release\GrowBoxDefines.obj
+.\Release\GrowBoxDlg.obj
+.\Release\GrowBoxSoapServer.obj
+.\Release\HygrosenseIF.obj
+.\Release\k8055d.obj
+.\Release\PrintPort32.obj
+.\Release\RelaisController.obj
+.\Release\soapC.obj
+.\Release\soapServer.obj
+.\Release\StateClass.obj
+.\Release\StdAfx.obj
+.\Release\stdsoap2.obj
+.\Release\USBDLL.OBJ
+.\Release\GrowBox.res
 ]
-Creating command line "cl.exe @C:\Users\duenda\AppData\Local\Temp\RSP2BD.tmp" 
-Creating temporary file "C:\Users\duenda\AppData\Local\Temp\RSP2BE.tmp" with contents
-[
-\mysql\5.0\lib\opt\libmysql.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/GrowBox.pdb" /debug /machine:I386 /out:"Debug/GrowBox.exe" /pdbtype:sept 
-.\Debug\CoolingController.obj
-.\Debug\CSerial.obj
-.\Debug\DBInterface.obj
-.\Debug\GrowBox.obj
-.\Debug\GrowBoxDefines.obj
-.\Debug\GrowBoxDlg.obj
-.\Debug\GrowBoxSoapServer.obj
-.\Debug\HygrosenseIF.obj
-.\Debug\k8055d.obj
-.\Debug\PrintPort32.obj
-.\Debug\RelaisController.obj
-.\Debug\soapC.obj
-.\Debug\soapServer.obj
-.\Debug\StateClass.obj
-.\Debug\StdAfx.obj
-.\Debug\stdsoap2.obj
-.\Debug\USBDLL.OBJ
-.\Debug\GrowBox.res
-]
-Creating command line "link.exe @C:\Users\duenda\AppData\Local\Temp\RSP2BE.tmp"
-Creating temporary file "C:\Users\duenda\AppData\Local\Temp\RSP2CF.bat" with contents
+Creating command line "link.exe @C:\DOCUME~1\talvin\LOCALS~1\Temp\RSP32.tmp"
+Creating temporary file "C:\DOCUME~1\talvin\LOCALS~1\Temp\RSP33.bat" with contents
 [
 @echo off
-copy        borlndmm.dll        .\.\Debug\
-copy        USB8IO.dll        .\.\Debug\
-copy        \mysql\5.0\lib\opt\libmysql.dll     .\.\Debug\
-copy        K8055D.dll    .\.\Debug\
+copy        borlndmm.dll        .\.\Release\
+copy        USB8IO.dll        .\.\Release\
+copy        \mysql\5.0\lib\opt\libmysql.dll     .\.\Release\
+copy        K8055D.dll    .\.\Release\
 ]
-Creating command line "C:\Users\duenda\AppData\Local\Temp\RSP2CF.bat"
-Compiling...
-GrowBoxDlg.cpp
-Skipping... (no relevant changes detected)
-GrowBox.cpp
-StateClass.cpp
+Creating command line "C:\DOCUME~1\talvin\LOCALS~1\Temp\RSP33.bat"
+Compiling resources...
 Linking...
+LINK : warning LNK4089: all references to "SHELL32.dll" discarded by /OPT:REF
+LINK : warning LNK4089: all references to "comdlg32.dll" discarded by /OPT:REF
 <h3>Output Window</h3>
-Performing Custom Build Step on .\Debug\GrowBox.exe
+Performing Custom Build Step on .\Release\GrowBox.exe
         1 file(s) copied.
         1 file(s) copied.
         1 file(s) copied.
@@ -62,7 +53,7 @@ Performing Custom Build Step on .\Debug\GrowBox.exe
 
 
 <h3>Results</h3>
-GrowBox.exe - 0 error(s), 0 warning(s)
+GrowBox.exe - 0 error(s), 2 warning(s)
 </pre>
 </body>
 </html>

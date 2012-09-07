@@ -1,31 +1,33 @@
 #include "stdafx.h"
 #include "DBInterface.h"
 
-#include "mysql.h"
+//#include "mysql.h"
+
 
 
 
 void DBInterface::initDBInterface()
 {
-	TRACE0("dbinteface initDBInterface\n");
+/*	TRACE0("dbinteface initDBInterface\n");
 	interfaceOn = false;
-	attemptConnect();
+	attemptConnect();  */
 }
 
 int DBInterface::isInterfaceOn()
 {
-	return interfaceOn;
+//	return interfaceOn;
+	return 0;
 }
 
 void DBInterface::exitDBInterface()
 {	
 //	TRACE0("dbinteface exitDBInterface\n");
-	closeConnect();
+/*	closeConnect(); */
 }
 
 void DBInterface::logValues(float temp, float hum)
 {
-
+/*
 	if (! interfaceOn ) attemptConnect();
 
 	if (interfaceOn) {
@@ -44,18 +46,19 @@ void DBInterface::logValues(float temp, float hum)
 			closeConnect();
 		}
 	}
-
+*/
 }
 
 void DBInterface::closeConnect() {
-	mysql_close(&mysql);	
+/*	mysql_close(&mysql);	
 	interfaceOn = false;
 	TRACE0("dbinteface close\n");
+	*/
 }
 
 void DBInterface::attemptConnect()
 { 
-	mysql_init(&mysql);
+/*	mysql_init(&mysql);
 	if (!mysql_real_connect(&mysql,"mirabella","grower","grower","growdb",0,NULL,0)) {
 		interfaceOn = false;
 		TRACE0("mysql connect failed\n");
@@ -64,4 +67,5 @@ void DBInterface::attemptConnect()
 		interfaceOn = true;
 //		TRACE0("mysql connect ok\n");
 	}
+	*/
 }

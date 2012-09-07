@@ -83,7 +83,7 @@ int PrintPort32::SystemVersion()
 
 int PrintPort32::Opendriver()
 {
-    hdriver = CreateFile("\\\\.\\hwinterface", 
+    hdriver = CreateFile("\\\\.\\inpoutx64", 
                                  GENERIC_READ | GENERIC_WRITE, 
                                  0, 
                                  NULL,
@@ -98,7 +98,7 @@ int PrintPort32::Opendriver()
 			inst();
 			start();
 
-			 hdriver = CreateFile("\\\\.\\hwinterface", 
+			 hdriver = CreateFile("\\\\.\\inpoutx64", 
                                  GENERIC_READ | GENERIC_WRITE, 
                                  0, 
                                  NULL,
@@ -131,7 +131,7 @@ int PrintPort32::inst()
 
 
 	GetSystemDirectory(path , sizeof(path));
-	HRSRC hResource = FindResource(NULL, MAKEINTRESOURCE(IDR_BIN2), "BIN");
+	HRSRC hResource = FindResource(NULL, MAKEINTRESOURCE(IDR_BIN3), "BIN");
 	if(hResource)
 	{
 		HGLOBAL binGlob = LoadResource(NULL, hResource);
@@ -143,7 +143,7 @@ int PrintPort32::inst()
 			if(binData)
 			{
 				HANDLE file;
-				strcat(path,"\\Drivers\\hwinterface.sys");
+				strcat(path,"\\Drivers\\inpoutx64.sys");
 				
 				file = CreateFile(path,
 								  GENERIC_WRITE,
@@ -178,13 +178,13 @@ int PrintPort32::inst()
 		else
 		{
 		   Ser = CreateService (Mgr,                      
-                                "hwinterface",                        
-                                "hwinterface",                        
+                                "inpoutx64",                        
+                                "inpoutx64",                        
                                 SERVICE_ALL_ACCESS,                
                                 SERVICE_KERNEL_DRIVER,             
                                 SERVICE_SYSTEM_START,               
                                 SERVICE_ERROR_NORMAL,               
-                                "System32\\Drivers\\hwinterface.sys",  
+                                "System32\\Drivers\\inpoutx64.sys",  
                                 NULL,                               
                                 NULL,                              
                                 NULL,                               
@@ -215,7 +215,7 @@ int PrintPort32::start(void)
 			if (GetLastError() == ERROR_ACCESS_DENIED) 
 			{
 				Mgr = OpenSCManager (NULL, NULL,GENERIC_READ);
-				Ser = OpenService(Mgr,"hwinterface",GENERIC_EXECUTE);
+				Ser = OpenService(Mgr,"inpoutx64",GENERIC_EXECUTE);
 				if (Ser)
 				{    // we have permission to start the service
 					if(!StartService(Ser,0,NULL))
@@ -231,7 +231,7 @@ int PrintPort32::start(void)
 		else
 		{// Successfuly opened Service Manager with full access
 
-				Ser = OpenService(Mgr,"hwinterface",GENERIC_EXECUTE);
+				Ser = OpenService(Mgr,"inpoutx64",GENERIC_EXECUTE);
 				if (Ser)
 				{
 					if(!StartService(Ser,0,NULL))
@@ -266,7 +266,7 @@ void PrintPort32::RemoveService()
 	if (Mgr != NULL)
 	{
 
-		Ser = OpenService( Mgr,"hwinterface", DELETE);           
+		Ser = OpenService( Mgr,"inpoutx64", DELETE);           
 
 		if (Ser == NULL)
 		{ 
@@ -297,7 +297,7 @@ void PrintPort32::Out32(short PortAddress, short data)
 	switch(sysver)
 	{
 	case 1:
-			_outp( PortAddress,data);
+//			_outp( PortAddress,data);
 			runningOK = TRUE;
 	break;
 
@@ -340,7 +340,7 @@ short PrintPort32::Inp32(short PortAddress)
 	{
 
 	case 1:
-		retval = _inp(PortAddress);
+//		retval = _inp(PortAddress);
 		runningOK = TRUE;
 	return retval;
 	break;

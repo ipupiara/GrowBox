@@ -14,10 +14,10 @@ Class2=CAboutDlg
 Class3=CGrowBoxDlg
 
 ResourceCount=4
-Resource1=IDD_ABOUTBOX (English (U.S.))
-Resource2=IDD_GROWBOX_DIALOG (English (U.S.))
+Resource1=IDD_GROWBOX_DIALOG
+Resource2=IDD_ABOUTBOX (English (U.S.))
 Resource3=IDD_ABOUTBOX
-Resource4=IDD_GROWBOX_DIALOG
+Resource4=IDD_GROWBOX_DIALOG (English (U.S.))
 
 [CLS:CGrowBoxApp]
 Type=0
@@ -39,7 +39,7 @@ HeaderFile=GrowBoxDlg.h
 ImplementationFile=GrowBoxDlg.cpp
 Filter=D
 VirtualFilter=dWC
-LastObject=IDC_BUTTONStopVentilation
+LastObject=CGrowBoxDlg
 
 [DLG:IDD_ABOUTBOX]
 Type=1

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "iostream.h"
+#include <iostream>
 
 
 //  PN 8. Nov 2005

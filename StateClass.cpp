@@ -9,7 +9,7 @@
 
 #include "stdafx.h"
 
-#include <iostream.h>
+#include <iostream>
 #include <assert.h>
 
 #include "TStatechart.h"
@@ -34,50 +34,50 @@ TStatechart<CHumidityStateClass>::xStateType xaStates[eNumberOfStates] = {
 /* name						*/	{eStateGrowBoxKeepingHumidity,
 /* parent					*/	-1,
 /* default_substate			*/	eStateIdle,
-/* event-checking func		*/	CHumidityStateClass::evStateGrowBoxKeepingHumidity,
+/* event-checking func		*/	&CHumidityStateClass::evStateGrowBoxKeepingHumidity,
 /* default state entry func	*/	NULL,  //CHumidityStateClass::defEntryStateGrowBoxKeepingHumidity,
-/* entering state func		*/	CHumidityStateClass::entryStateGrowBoxKeepingHumidity,
-/* exiting state func		*/	CHumidityStateClass::exitStateGrowBoxKeepingHumidity},
+/* entering state func		*/	&CHumidityStateClass::entryStateGrowBoxKeepingHumidity,
+/* exiting state func		*/	&CHumidityStateClass::exitStateGrowBoxKeepingHumidity},
 
 /* name						*/	{eStateHumidifying,
 /* parent					*/	eStateGrowBoxKeepingHumidity,
 /* default_substate			*/	-1,
-/* event-checking func		*/	CHumidityStateClass::evStateHumidifying,
+/* event-checking func		*/	&CHumidityStateClass::evStateHumidifying,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CHumidityStateClass::entryStateHumidifying,
-/* exiting state func		*/	CHumidityStateClass::exitStateHumidifying},
+/* entering state func		*/	&CHumidityStateClass::entryStateHumidifying,
+/* exiting state func		*/	&CHumidityStateClass::exitStateHumidifying},
 
 /* name						*/	{eStateIdle,
 /* parent					*/	eStateGrowBoxKeepingHumidity,
 /* default_substate			*/	eStateNonVentilating,
-/* event-checking func		*/	CHumidityStateClass::evStateIdle,
+/* event-checking func		*/	&CHumidityStateClass::evStateIdle,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CHumidityStateClass::entryStateIdle,
-/* exiting state func		*/	CHumidityStateClass::exitStateIdle},
+/* entering state func		*/	&CHumidityStateClass::entryStateIdle,
+/* exiting state func		*/	&CHumidityStateClass::exitStateIdle},
 
 /* name						*/	{eStateNonVentilating,
 /* parent					*/	eStateIdle,
 /* default_substate			*/	-1,
-/* event-checking func		*/	CHumidityStateClass::evStateNonVentilating,
+/* event-checking func		*/	&CHumidityStateClass::evStateNonVentilating,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CHumidityStateClass::entryStateNonVentilating,
-/* exiting state func		*/	CHumidityStateClass::exitStateNonVentilating},
+/* entering state func		*/	&CHumidityStateClass::entryStateNonVentilating,
+/* exiting state func		*/	&CHumidityStateClass::exitStateNonVentilating},
 
 /* name						*/	{eStateVentilating,
 /* parent					*/	eStateIdle,
 /* default_substate			*/	-1,
-/* event-checking func		*/	CHumidityStateClass::evStateVentilating,
+/* event-checking func		*/	&CHumidityStateClass::evStateVentilating,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CHumidityStateClass::entryStateVentilating,
-/* exiting state func		*/	CHumidityStateClass::exitStateVentilating},
+/* entering state func		*/	&CHumidityStateClass::entryStateVentilating,
+/* exiting state func		*/	&CHumidityStateClass::exitStateVentilating},
 
 /* name						*/	{eStateDrying,
 /* parent					*/	eStateGrowBoxKeepingHumidity,
 /* default_substate			*/	-1,
-/* event-checking func		*/	CHumidityStateClass::evStateDrying,
+/* event-checking func		*/	&CHumidityStateClass::evStateDrying,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CHumidityStateClass::entryStateDrying,
-/* exiting state func		*/	CHumidityStateClass::exitStateDrying}
+/* entering state func		*/	&CHumidityStateClass::entryStateDrying,
+/* exiting state func		*/	&CHumidityStateClass::exitStateDrying}
 };
 
 
@@ -347,34 +347,34 @@ TStatechart<CTemperatureStateClass>::xStateType xTemperatureStates[eNumberOfTemp
 /* name						*/	{eStateGrowBoxTemperature,
 /* parent					*/	-1,
 /* default_substate			*/	eStateTemperatureIdle,
-/* event-checking func		*/	CTemperatureStateClass::evStateGrowBoxTemperature,
+/* event-checking func		*/	&CTemperatureStateClass::evStateGrowBoxTemperature,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CTemperatureStateClass::entryStateGrowBoxTemperature,
-/* exiting state func		*/	CTemperatureStateClass::exitStateGrowBoxTemperature},
+/* entering state func		*/	&CTemperatureStateClass::entryStateGrowBoxTemperature,
+/* exiting state func		*/	&CTemperatureStateClass::exitStateGrowBoxTemperature},
 
 /* name						*/	{eStateTemperatureIdle,
 /* parent					*/	eStateGrowBoxTemperature,
 /* default_substate			*/	-1,
-/* event-checking func		*/	CTemperatureStateClass::evStateTemperatureIdle,
+/* event-checking func		*/	&CTemperatureStateClass::evStateTemperatureIdle,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CTemperatureStateClass::entryStateTemperatureIdle,
-/* exiting state func		*/	CTemperatureStateClass::exitStateTemperatureIdle},
+/* entering state func		*/	&CTemperatureStateClass::entryStateTemperatureIdle,
+/* exiting state func		*/	&CTemperatureStateClass::exitStateTemperatureIdle},
 
 /* name						*/	{eStateHeating,
 /* parent					*/	eStateGrowBoxTemperature,
 /* default_substate			*/	-1,
-/* event-checking func		*/	CTemperatureStateClass::evStateHeating,
+/* event-checking func		*/	&CTemperatureStateClass::evStateHeating,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CTemperatureStateClass::entryStateHeating,
-/* exiting state func		*/	CTemperatureStateClass::exitStateHeating},
+/* entering state func		*/	&CTemperatureStateClass::entryStateHeating,
+/* exiting state func		*/	&CTemperatureStateClass::exitStateHeating},
 
 /* name						*/	{eStateCooling,
 /* parent					*/	eStateGrowBoxTemperature,
 /* default_substate			*/	-1,
-/* event-checking func		*/	CTemperatureStateClass::evStateCooling,
+/* event-checking func		*/	&CTemperatureStateClass::evStateCooling,
 /* default state entry func	*/	NULL,
-/* entering state func		*/	CTemperatureStateClass::entryStateCooling,
-/* exiting state func		*/	CTemperatureStateClass::exitStateCooling},
+/* entering state func		*/	&CTemperatureStateClass::entryStateCooling,
+/* exiting state func		*/	&CTemperatureStateClass::exitStateCooling},
 
 };
 

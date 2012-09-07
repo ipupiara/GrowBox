@@ -1,0 +1,11 @@
+create database growdb;
+use growdb;
+create table growdata (id_growdata int auto_increment primary key, ts TIMESTAMP ,temp FLOAT(7,2), hum FLOAT (7,2));
+create index ts_ind ON growdata (ts);
+show tables;
+describe growdata;
+show index from growdata;
+show databases;
+CREATE USER  'grower'@'%' IDENTIFIED BY 'grower'; 
+GRANT INSERT, DELETE, SELECT ON growdata TO 'grower'@'%';
+show grants FOR 'grower'@'%';

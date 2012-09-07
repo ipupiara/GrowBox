@@ -260,7 +260,7 @@ CGrowBoxDlg::~CGrowBoxDlg()
 
 
 
-void CGrowBoxDlg::OnTimer(UINT nIDEvent) 
+void CGrowBoxDlg::OnTimer(UINT_PTR nIDEvent) 
 {
 	// TODO: Add your message handler code here and/or call default
 	CDialog::OnTimer(nIDEvent);
